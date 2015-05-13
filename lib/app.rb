@@ -37,5 +37,5 @@ end
 
 @wrestlers_csv_array = CSV.read("resources/wrestler_list.csv")
 turn_array_into_objects(@wrestlers_csv_array)
-binding.pry
+# binding.pry
 puts "Testing"
