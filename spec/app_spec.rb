@@ -1,5 +1,5 @@
-require_relative 'lib/app'
+require 'app'
 
-describe App do
+describe 'App' do
 
 end
