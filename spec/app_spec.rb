@@ -85,7 +85,10 @@ RSpec.describe 'App', :app do
         it "cell 25's first variable returns 'Dave'" do
           expect(@wrestler_objects_array[25].first).to eq('Dave')
         end
-      #<Wrestler:0x007f9999c03188 @first="Billy", @last="Gunn", @priority=3, @tag_priority=3, @height="6' 3", @weight=260, @weight_class="Heavyweight", @city="Austin", @state="TX", @country="United States", @region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
+        it "cell 75's last variable returns 'Frederico'" do
+          expect(@wrestler_objects_array[75].last).to eq('Frederico')
+        end
+      #@last="Gunn", @priority=3, @tag_priority=3, @height="6' 3", @weight=260, @weight_class="Heavyweight", @city="Austin", @state="TX", @country="United States", @region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
         # binding.pry
       end
     end
