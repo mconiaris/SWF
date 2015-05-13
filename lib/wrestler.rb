@@ -9,8 +9,8 @@ class Wrestler
   def initialize(args)
     @first          =  args[:first]
     @last           =  args[:last]
-    @priority       =  args[:priority]
-    @tag_priority   =  args[:tag_priority]
+    @priority       =  args[:priority].to_i
+    @tag_priority   =  args[:tag_priority].to_i
     @height         =  args[:height]
     @weight         =  args[:weight].to_i
     @weight_class   =  weight_class || "Heavyweight"
@@ -22,8 +22,8 @@ class Wrestler
     @losses         =  args[:losses].to_i
     @draws          =  args[:draws].to_i
     @difference     =  difference
-    @matches        =  args[:matches].to_i
-    @remaining      =  args[:remaining].to_i
+    @matches        =  matches
+    @remaining      =  remaining
     @status         =  args[:status]
     @aliases        =  args[:aliases]
   end
@@ -55,10 +55,9 @@ class Wrestler
     @wins + @losses + @draws
   end
 
-  # def remaining(wrestler)
-  #   binding.pry
-  #   (cell[2].to_i * 20) - cell[15].to_i
-  # end
+  def remaining
+    (@priority * 20) - @matches
+  end
 
   # def status(wrestler)
   #   binding.pry
