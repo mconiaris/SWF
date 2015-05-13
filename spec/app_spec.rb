@@ -49,8 +49,11 @@ RSpec.describe 'App', :app do
       it "cell 450's cell 9 returns 'Japan'" do
         expect(@wrestlers_csv_array[450][9]).to eq('Japan')
       end
-      it "cell 500's cell 10 returns 'Japan'" do
+      it "cell 500's cell 10 returns 'Southeast'" do
         expect(@wrestlers_csv_array[500][10]).to eq('Southeast')
+      end
+      it "cell 550's cell 11 returns '20'" do
+        expect(@wrestlers_csv_array[550][11]).to eq('20')
       end
     end
   end
