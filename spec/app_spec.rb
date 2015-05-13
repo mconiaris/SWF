@@ -118,7 +118,16 @@ RSpec.describe 'App', :app do
         it "cell 575's losses variable returns '25'" do
           expect(@wrestler_objects_array[575].losses).to eq(25)
         end
-      #@losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
+        it "cell 625's draws variable returns '9'" do
+          expect(@wrestler_objects_array[625].draws).to eq(9)
+        end
+        it "cell 675's difference variable returns '16'" do
+          expect(@wrestler_objects_array[675].difference).to eq(16)
+        end
+        it "cell 725's matches variable returns '20'" do
+          expect(@wrestler_objects_array[725].matches).to eq(20)
+        end
+      #@difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
         # binding.pry
       end
     end
