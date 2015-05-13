@@ -28,6 +28,7 @@ class Wrestler
     @aliases        =  args[:aliases]
   end
 
+  # Determines weight class of wrestler
   def weight_class
     if @weight < 215
       "Lightweight"
@@ -42,14 +43,17 @@ class Wrestler
     end
   end
 
+  # Deterrmines how many more wins than
+  # losses the wrestler has
   def difference
     @wins - @losses
   end
 
-  # def matches(wrestler)
-  #   binding.pry
-  #   cell[11].to_i + cell[12].to_i + cell[13].to_i
-  # end
+  # Determines the total number of matches
+  # that the wrestler has
+  def matches
+    @wins + @losses + @draws
+  end
 
   # def remaining(wrestler)
   #   binding.pry
