@@ -15,8 +15,16 @@ def weight_class(cell)
     "Heavyweight"
 
   end
-  # binding.pry
 end
+
+def difference(cell)
+  cell[11].to_i - cell[12].to_i
+end
+
+def matches(cell)
+  cell[11].to_i + cell[12].to_i + cell[13].to_i
+end
+  # binding.pry
 
 def turn_array_into_objects(array)
 
@@ -45,8 +53,8 @@ def turn_array_into_objects(array)
       wins:           cell[11],
       losses:         cell[12],
       draws:          cell[13],
-      difference:     cell[14],
-      matches:        cell[15],
+      difference:     difference(cell),
+      matches:        matches(cell),
       remaining:      cell[16],
       status:         cell[17],
       aliases:        cell[18],
