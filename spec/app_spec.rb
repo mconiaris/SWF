@@ -103,7 +103,10 @@ RSpec.describe 'App', :app do
         it "cell 325's city variable returns 'Houston'" do
           expect(@wrestler_objects_array[325].city).to eq('Houston')
         end
-      #@city="Austin", @state="TX", @country="United States", @region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
+        it "cell 375's state variable returns 'nil'" do
+          expect(@wrestler_objects_array[375].state).to eq(nil)
+        end
+      #@state="TX", @country="United States", @region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
         # binding.pry
       end
     end
