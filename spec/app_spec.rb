@@ -127,7 +127,15 @@ RSpec.describe 'App', :app do
         it "cell 725's matches variable returns '20'" do
           expect(@wrestler_objects_array[725].matches).to eq(20)
         end
-      #@difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
+        it "cell 775's remaining variable returns '0'" do
+          expect(@wrestler_objects_array[775].remaining).to eq(0)
+        end
+        it "cell 785's status variable returns 'Retired'" do
+          expect(@wrestler_objects_array[785].status).to eq('Retired')
+        end
+        it "cell 796's aliases variable returns 'nil'" do
+          expect(@wrestler_objects_array[796].aliases).to eq(nil)
+        end
         # binding.pry
       end
     end

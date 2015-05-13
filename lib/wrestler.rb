@@ -3,7 +3,7 @@ class Wrestler
   attr_reader :first, :last, :priority, :tag_priority,
     :height, :weight, :class, :city, :state, :country,
     :region, :wins, :losses, :draws, :difference,
-    :matches, :remaining, :status, :alias
+    :matches, :remaining, :status, :aliases
 
 
   def initialize(args)
