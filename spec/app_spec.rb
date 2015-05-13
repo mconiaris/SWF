@@ -6,7 +6,7 @@ RSpec.describe 'App', :app do
   describe '#turn_array_into_objects' do
     before(:context) do
       @wrestlers_csv_array = CSV.read("resources/wrestler_list.csv")
-      @stuff = turn_array_into_objects(@wrestlers_csv_array)
+      @wrestler_list = turn_array_into_objects(@wrestlers_csv_array)
     end
     context "wrestlers_csv_array" do
       it "is an array" do
@@ -75,6 +75,14 @@ RSpec.describe 'App', :app do
       end
       it "cell 797's cell 18 returns 'nil'" do
         expect(@wrestlers_csv_array[797][18]).to eq(nil)
+      end
+    end
+    context '#turn_array_into_objects', :wrestler_list do
+      describe '@wrestler_objects_array' do
+        it 'returns a size of 798' do
+          expect(@wrestler_objects_array.size).to eq(798)
+        end
+        # binding.pry
       end
     end
   end
