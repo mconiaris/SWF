@@ -11,7 +11,7 @@ class Wrestler
     @last           =  args[:last]
     @priority       =  args[:priority].to_i
     @tag_priority   =  args[:tag_priority].to_i
-    @height         =  args[:height]
+    @height         =  normalize_height(args[:height])
     @weight         =  args[:weight].to_i
     @weight_class   =  weight_class || "Heavyweight"
     @city           =  args[:city]
@@ -26,6 +26,14 @@ class Wrestler
     @remaining      =  remaining
     @status         =  status
     @aliases        =  args[:aliases]
+  end
+
+  def normalize_height(arg)
+    # binding.pry
+    if arg != nil
+      arg[arg.size-1] = ''
+      return arg
+    end
   end
 
   # Determines weight class of wrestler
