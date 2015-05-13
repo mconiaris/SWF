@@ -30,9 +30,8 @@ def turn_array_into_objects(array)
       draws:          cell[13],
       aliases:        cell[18],
     )
-  end
-  binding.pry
   @wrestler_objects_array.push(@wrestler)
+  end
 end
 
 
