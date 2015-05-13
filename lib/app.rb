@@ -37,10 +37,10 @@ def turn_array_into_objects(array)
     )
     wrestler_objects_array.push(@wrestler)
   end
-  binding.pry
-puts "Testing"
 end
 
 
 @wrestlers_csv_array = CSV.read("resources/wrestler_list.csv")
-turn_array_into_objects(@wrestlers_csv_array)
+@wrestlers = turn_array_into_objects(@wrestlers_csv_array)
+binding.pry
+puts "Testing"
