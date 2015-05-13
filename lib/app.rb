@@ -2,30 +2,6 @@ require_relative 'wrestler'
 require 'pry'
 require 'csv'
 
-def weight_class(cell)
-  if cell[5].to_i < 215
-    "Lightweight"
-  elsif cell[5].to_i < 230
-    "Cruiserweight"
-  elsif cell[5].to_i < 300
-    "Heavyweight"
-  elsif cell[5].to_i > 300
-    "Super Heavyweight"
-  else
-    "Heavyweight"
-
-  end
-end
-
-def difference(cell)
-  cell[11].to_i - cell[12].to_i
-end
-
-def matches(cell)
-  cell[11].to_i + cell[12].to_i + cell[13].to_i
-end
-  # binding.pry
-
 def turn_array_into_objects(array)
 
   # Get array from CSV
@@ -45,7 +21,6 @@ def turn_array_into_objects(array)
       tag_priority:   cell[3],
       height:         cell[4],
       weight:         cell[5],
-      weight_class:   weight_class(cell),
       city:           cell[7],
       state:          cell[8],
       country:        cell[9],
@@ -53,14 +28,11 @@ def turn_array_into_objects(array)
       wins:           cell[11],
       losses:         cell[12],
       draws:          cell[13],
-      difference:     difference(cell),
-      matches:        matches(cell),
-      remaining:      cell[16],
-      status:         cell[17],
       aliases:        cell[18],
     )
-    @wrestler_objects_array.push(@wrestler)
   end
+  binding.pry
+  @wrestler_objects_array.push(@wrestler)
 end
 
 
