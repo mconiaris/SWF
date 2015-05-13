@@ -70,6 +70,12 @@ RSpec.describe 'App', :app do
       it "cell 775's cell 16 returns '0'" do
         expect(@wrestlers_csv_array[775][16]).to eq('0')
       end
+      it "cell 785's cell 17 returns 'Retired'" do
+        expect(@wrestlers_csv_array[785][17]).to eq('Retired')
+      end
+      it "cell 797's cell 18 returns 'nil'" do
+        expect(@wrestlers_csv_array[797][18]).to eq(nil)
+      end
     end
   end
 
