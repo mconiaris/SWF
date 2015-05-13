@@ -31,7 +31,7 @@ RSpec.describe 'App', :app do
       it "cell 150's cell 3 returns '2'" do
         expect(@wrestlers_csv_array[150][3]).to eq('2')
       end
-      it "cell 200's cell 4 returns '3'" do
+      it "cell 200's cell 4 returns 'nil'" do
         expect(@wrestlers_csv_array[200][4]).to eq(nil)
       end
       it "cell 250's cell 5 returns '3'" do
@@ -39,6 +39,12 @@ RSpec.describe 'App', :app do
       end
       it "cell 300's cell 6 returns 'Heavyweight'" do
         expect(@wrestlers_csv_array[300][6]).to eq("Heavyweight")
+      end
+      it "cell 350's cell 7 returns 'nil'" do
+        expect(@wrestlers_csv_array[350][7]).to eq(nil)
+      end
+      it "cell 400's cell 8 returns 'nil'" do
+        expect(@wrestlers_csv_array[400][8]).to eq(nil)
       end
     end
   end
