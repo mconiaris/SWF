@@ -13,6 +13,12 @@ RSpec.describe 'App', :app do
         expect(@wrestlers_csv_array.class).to eq(Array)
     # binding.pry
       end
+      it "has a size of 798" do
+        expect(@wrestlers_csv_array.size).to eq(798)
+      end
+      it "cell 1's cell 0 returns 'Billy'" do
+        expect(@wrestlers_csv_array[1][0]).to eq('Butcher')
+      end
     end
   end
 
