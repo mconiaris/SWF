@@ -94,7 +94,16 @@ RSpec.describe 'App', :app do
         it "cell 175's height variable returns 'nil'" do
           expect(@wrestler_objects_array[175].height).to eq(nil)
         end
-      #@weight=260, @weight_class="Heavyweight", @city="Austin", @state="TX", @country="United States", @region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
+        it "cell 225's weight variable returns '235'" do
+          expect(@wrestler_objects_array[225].weight).to eq(235)
+        end
+        it "cell 275's weight_class variable returns 'Heavyweight'" do
+          expect(@wrestler_objects_array[275].weight_class).to eq('Heavyweight')
+        end
+        it "cell 325's city variable returns 'Houston'" do
+          expect(@wrestler_objects_array[325].city).to eq('Houston')
+        end
+      #@city="Austin", @state="TX", @country="United States", @region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
         # binding.pry
       end
     end
