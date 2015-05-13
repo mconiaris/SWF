@@ -46,6 +46,9 @@ RSpec.describe 'App', :app do
       it "cell 400's cell 8 returns 'nil'" do
         expect(@wrestlers_csv_array[400][8]).to eq(nil)
       end
+      it "cell 450's cell 9 returns 'Japan'" do
+        expect(@wrestlers_csv_array[450][9]).to eq('Japan')
+      end
     end
   end
 
