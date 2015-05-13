@@ -28,6 +28,9 @@ RSpec.describe 'App', :app do
       it "cell 100's cell 2 returns '1'" do
         expect(@wrestlers_csv_array[100][2]).to eq('1')
       end
+      it "cell 150's cell 3 returns '2'" do
+        expect(@wrestlers_csv_array[150][3]).to eq('2')
+      end
     end
   end
 
