@@ -21,7 +21,7 @@ class Wrestler
     @wins           =  args[:wins].to_i
     @losses         =  args[:losses].to_i
     @draws          =  args[:draws].to_i
-    @difference     =  args[:difference]
+    @difference     =  difference
     @matches        =  args[:matches].to_i
     @remaining      =  args[:remaining].to_i
     @status         =  args[:status]
@@ -42,9 +42,9 @@ class Wrestler
     end
   end
 
-  # def difference(wrestler)
-  #   cell[11].to_i - cell[12].to_i
-  # end
+  def difference
+    @wins - @losses
+  end
 
   # def matches(wrestler)
   #   binding.pry
