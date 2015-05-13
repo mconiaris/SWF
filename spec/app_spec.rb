@@ -106,7 +106,13 @@ RSpec.describe 'App', :app do
         it "cell 375's state variable returns 'nil'" do
           expect(@wrestler_objects_array[375].state).to eq(nil)
         end
-      #@state="TX", @country="United States", @region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
+        it "cell 425's country variable returns 'Singapore'" do
+          expect(@wrestler_objects_array[425].country).to eq('Singapore')
+        end
+        it "cell 475's region variable returns 'Southeast'" do
+          expect(@wrestler_objects_array[475].region).to eq('Southeast')
+        end
+      #@region="Northeast", @wins=0, @losses=0, @draws=0, @difference=0, @matches=0, @remaining=60, @status="Active", @aliases=nil>
         # binding.pry
       end
     end
