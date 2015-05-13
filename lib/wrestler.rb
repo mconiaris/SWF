@@ -24,7 +24,7 @@ class Wrestler
     @difference     =  difference
     @matches        =  matches
     @remaining      =  remaining
-    @status         =  args[:status]
+    @status         =  status
     @aliases        =  args[:aliases]
   end
 
@@ -59,13 +59,11 @@ class Wrestler
     (@priority * 20) - @matches
   end
 
-  # def status(wrestler)
-  #   binding.pry
-  #   if cell[16].to_i > 0
-  #     "Active"
-  #   else
-  #     "Retired"
-  #   end
-  # end
-    # binding.pry
+  def status
+    if @remaining > 0
+      "Active"
+    else
+      "Retired"
+    end
+  end
 end
