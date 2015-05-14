@@ -8,6 +8,7 @@ RSpec.describe 'Wrestler', :wrestler do
       last:           'Cena',
       priority:       '5',
       tag_priority:   '2',
+      height:         "6' 1\""
 
     })
     # :height, :weight, :class, :city, :state, :country,
@@ -33,6 +34,10 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "tag priority returns a Fixnum" do
       expect(@wrestler.tag_priority.class).to eq(Fixnum)
+    end
+    # TODO: Fix test to respond to correct input
+    it "height returns 6' 1\"" do
+      expect(@wrestler.height).to eq("6' 1")
     end
   end
 end
