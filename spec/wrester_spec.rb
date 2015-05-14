@@ -17,8 +17,6 @@ RSpec.describe 'Wrestler', :wrestler do
       wins:           "3",
       losses:         "2",
       draws:          "1",
-      #:difference,
-
     })
     # :matches, :remaining, :status, :aliases
 
@@ -75,6 +73,9 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "difference returns '1'" do
       expect(@wrestler.difference).to eq(1)
+    end
+    it "matches returns '6'" do
+      expect(@wrestler.matches).to eq(6)
     end
   end
 end
