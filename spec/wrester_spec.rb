@@ -15,7 +15,8 @@ RSpec.describe 'Wrestler', :wrestler do
       country:        "United States",
       region:         "Northeast",
       wins:           "0",
-      #:losses, :draws, :difference,
+      losses:         "0"
+      #, :draws, :difference,
 
     })
     # :matches, :remaining, :status, :aliases
@@ -64,6 +65,9 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "wins returns '0'" do
       expect(@wrestler.wins).to eq(0)
+    end
+    it "losses returns '0'" do
+      expect(@wrestler.losses).to eq(0)
     end
   end
 end
