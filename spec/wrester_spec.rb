@@ -12,7 +12,7 @@ RSpec.describe 'Wrestler', :wrestler do
       weight:         "251",
       city:           "West Newbury",
       state:          "MA",
-      # :country,
+      country:        "United States",
 
     })
     # :region, :wins, :losses, :draws, :difference,
@@ -53,6 +53,9 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "state returns 'MA'" do
       expect(@wrestler.state).to eq('MA')
+    end
+    it "country returns 'United States'" do
+      expect(@wrestler.country).to eq('United States')
     end
   end
 end
