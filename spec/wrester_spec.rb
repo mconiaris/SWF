@@ -14,8 +14,8 @@ RSpec.describe 'Wrestler', :wrestler do
       state:          "MA",
       country:        "United States",
       region:         "Northeast",
-      wins:           "1",
-      losses:         "1",
+      wins:           "3",
+      losses:         "2",
       draws:          "1",
       #:difference,
 
@@ -64,11 +64,11 @@ RSpec.describe 'Wrestler', :wrestler do
     it "region returns 'Northeast'" do
       expect(@wrestler.region).to eq('Northeast')
     end
-    it "wins returns '1'" do
-      expect(@wrestler.wins).to eq(1)
+    it "wins returns '3'" do
+      expect(@wrestler.wins).to eq(3)
     end
-    it "losses returns '1'" do
-      expect(@wrestler.losses).to eq(1)
+    it "losses returns '2'" do
+      expect(@wrestler.losses).to eq(2)
     end
     it "draws returns '1'" do
       expect(@wrestler.draws).to eq(1)
