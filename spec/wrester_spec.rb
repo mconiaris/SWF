@@ -17,8 +17,8 @@ RSpec.describe 'Wrestler', :wrestler do
       wins:           "3",
       losses:         "2",
       draws:          "1",
+      aliases:        "The Prototype"
     })
-    # :status, :aliases
 
   end
   describe '#initialize' do
@@ -82,6 +82,9 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "status returns 'Active'" do
       expect(@wrestler.status).to eq('Active')
+    end
+    it "aliases returns 'The Prototype'" do
+      expect(@wrestler.aliases).to eq('The Prototype')
     end
   end
 end
