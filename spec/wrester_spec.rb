@@ -4,11 +4,12 @@ require 'pry'
 RSpec.describe 'Wrestler', :wrestler do
   before(:context) do
     @wrestler = Wrestler.new({
-      first:      'John',
-      last:       'Cena',
-      priority:   '5',
+      first:          'John',
+      last:           'Cena',
+      priority:       '5',
+      tag_priority:   '2',
+
     })
-    # :priority, :tag_priority,
     # :height, :weight, :class, :city, :state, :country,
     # :region, :wins, :losses, :draws, :difference,
     # :matches, :remaining, :status, :aliases
@@ -26,6 +27,12 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "priority returns a Fixnum" do
       expect(@wrestler.priority.class).to eq(Fixnum)
+    end
+    it "tag_priority returns '2'" do
+      expect(@wrestler.tag_priority).to eq(2)
+    end
+    it "tag priority returns a Fixnum" do
+      expect(@wrestler.tag_priority.class).to eq(Fixnum)
     end
   end
 end
