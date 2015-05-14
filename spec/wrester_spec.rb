@@ -18,7 +18,7 @@ RSpec.describe 'Wrestler', :wrestler do
       losses:         "2",
       draws:          "1",
     })
-    # :matches, :remaining, :status, :aliases
+    # :status, :aliases
 
   end
   describe '#initialize' do
@@ -76,6 +76,12 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "matches returns '6'" do
       expect(@wrestler.matches).to eq(6)
+    end
+    it "remaining returns '94'" do
+      expect(@wrestler.remaining).to eq(94)
+    end
+    it "status returns 'Active'" do
+      expect(@wrestler.status).to eq('Active')
     end
   end
 end
