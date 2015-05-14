@@ -10,7 +10,8 @@ RSpec.describe 'Wrestler', :wrestler do
       tag_priority:   '2',
       height:         "6' 1\"",
       weight:         "251",
-      #, :class, :city, :state, :country,
+      city:           "West Newbury",
+      # :state, :country,
 
     })
     # :region, :wins, :losses, :draws, :difference,
@@ -42,6 +43,12 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "weight returns 251" do
       expect(@wrestler.weight).to eq(251)
+    end
+    it "weight class returns 'Heavyweight'" do
+      expect(@wrestler.weight_class).to eq('Heavyweight')
+    end
+    it "city returns 'West Newbury'" do
+      expect(@wrestler.city).to eq('West Newbury')
     end
   end
 end
