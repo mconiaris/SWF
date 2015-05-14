@@ -8,7 +8,7 @@ RSpec.describe 'App', :app do
       @wrestlers_csv_array = CSV.read("resources/wrestler_list.csv")
       @wrestler_list = turn_array_into_objects(@wrestlers_csv_array)
     end
-    context "wrestlers_csv_array" do
+    context "wrestlers_csv_array", :csv_array do
       it "is an array" do
         expect(@wrestlers_csv_array.class).to eq(Array)
     # binding.pry
