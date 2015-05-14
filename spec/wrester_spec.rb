@@ -73,5 +73,8 @@ RSpec.describe 'Wrestler', :wrestler do
     it "draws returns '1'" do
       expect(@wrestler.draws).to eq(1)
     end
+    it "difference returns '1'" do
+      expect(@wrestler.difference).to eq(1)
+    end
   end
 end
