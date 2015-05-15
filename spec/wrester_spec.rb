@@ -22,6 +22,9 @@ RSpec.describe 'Wrestler', :wrestler do
 
   end
   describe '#initialize' do
+    it "returns a Wrestler object" do
+      expect(@wrestler.class).to eq(Wrestler)
+    end
     it "first returns 'John'" do
       expect(@wrestler.first).to eq('John')
     end

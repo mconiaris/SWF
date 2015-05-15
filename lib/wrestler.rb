@@ -1,7 +1,7 @@
 class Wrestler
 
   attr_reader :first, :last, :priority, :tag_priority,
-    :height, :weight, :class, :city, :state, :country,
+    :height, :weight, :weight_class, :city, :state, :country,
     :region, :wins, :losses, :draws, :difference,
     :matches, :remaining, :status, :aliases
 
