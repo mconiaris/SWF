@@ -7,7 +7,7 @@ RSpec.describe 'Match', :match do
       match_type:     'single',
       wrestler_1:     'John Cena',
       wrestler_2:     'Rusev',
-      winner:         'wrestler_1',
+      winner:         'John Cena',
       outcome:        'submission',
       time:           '12:52',
     })
@@ -24,6 +24,9 @@ RSpec.describe 'Match', :match do
     end
     it "wrestler_2 returns 'Rusev'" do
       expect(@match.wrestler_2).to eq('Rusev')
+    end
+    it "winner returns 'John Cena'" do
+      expect(@match.winner).to eq('John Cena')
     end
   end
 end
