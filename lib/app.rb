@@ -1,5 +1,4 @@
 require_relative 'wrestler'
-require 'pry'
 require 'csv'
 
 def turn_array_into_objects(array)

@@ -1,5 +1,4 @@
 require 'app'
-require 'pry'
 require_relative "../lib/app"
 
 RSpec.describe 'App', :app do
