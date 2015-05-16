@@ -1,3 +1,5 @@
+require 'pry'
+
 
 RSpec.describe 'Match', :match do
   before(:context) do
@@ -13,6 +15,9 @@ RSpec.describe 'Match', :match do
   describe '#initialize' do
     it "returns a Match object" do
       expect(@match.class).to eq(Match)
+    end
+    it "match_type is 'single'" do
+      expect(@match.match_type).to eq('single')
     end
   end
 end
