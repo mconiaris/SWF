@@ -19,5 +19,8 @@ RSpec.describe 'Match', :match do
     it "match_type is 'single'" do
       expect(@match.match_type).to eq('single')
     end
+    it "wrestler_1 returns 'John Cena'" do
+      expect(@match.wrestler_1).to eq('John Cena')
+    end
   end
 end
