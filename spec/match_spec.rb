@@ -22,5 +22,8 @@ RSpec.describe 'Match', :match do
     it "wrestler_1 returns 'John Cena'" do
       expect(@match.wrestler_1).to eq('John Cena')
     end
+    it "wrestler_2 returns 'Rusev'" do
+      expect(@match.wrestler_2).to eq('Rusev')
+    end
   end
 end
