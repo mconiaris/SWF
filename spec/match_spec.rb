@@ -31,5 +31,8 @@ RSpec.describe 'Match', :match do
     it "outcome returns 'submission'" do
       expect(@match.outcome).to eq('submission')
     end
+    it "time returns '12:52'" do
+      expect(@match.time).to eq('12:52')
+    end
   end
 end
