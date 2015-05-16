@@ -35,4 +35,5 @@ RSpec.describe 'Match', :match do
       expect(@match.time).to eq('12:52')
     end
   end
+  #TODO: create tests for date, location, card name
 end
