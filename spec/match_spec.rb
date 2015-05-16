@@ -28,5 +28,8 @@ RSpec.describe 'Match', :match do
     it "winner returns 'John Cena'" do
       expect(@match.winner).to eq('John Cena')
     end
+    it "outcome returns 'submission'" do
+      expect(@match.outcome).to eq('submission')
+    end
   end
 end
