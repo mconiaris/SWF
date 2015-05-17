@@ -14,5 +14,8 @@ RSpec.describe 'Arena', :arena do
     it "returns a Arena object" do
       expect(@arena.class).to eq(Arena)
     end
+    it "arena name is 'Madison Square Garden'" do
+      expect(@arena.arena_name).to eq('Madison Square Garden')
+    end
   end
 end
