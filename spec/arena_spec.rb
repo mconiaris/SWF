@@ -1,5 +1,4 @@
 require 'pry'
-require 'date'
 
 
 RSpec.describe 'Arena', :arena do
