@@ -23,5 +23,8 @@ RSpec.describe 'Arena', :arena do
     it "arena_state is 'NY'" do
       expect(@arena.arena_state).to eq('NY')
     end
+    it "arena_country is 'United States'" do
+      expect(@arena.arena_country).to eq('United States')
+    end
   end
 end
