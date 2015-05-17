@@ -6,7 +6,7 @@ RSpec.describe 'Arena', :arena do
     @arena = Arena.new({
       arena_name:     'Madison Square Garden',
       arena_city:     'New York',
-      arena_sate:     'NY',
+      arena_state:    'NY',
       arena_country:  'United States',
     })
   end
@@ -16,6 +16,12 @@ RSpec.describe 'Arena', :arena do
     end
     it "arena name is 'Madison Square Garden'" do
       expect(@arena.arena_name).to eq('Madison Square Garden')
+    end
+    it "arena_city is 'New York'" do
+      expect(@arena.arena_city).to eq('New York')
+    end
+    it "arena_state is 'NY'" do
+      expect(@arena.arena_state).to eq('NY')
     end
   end
 end
