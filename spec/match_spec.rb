@@ -40,7 +40,7 @@ RSpec.describe 'Match', :match do
       expect(@match.date.class).to eq(Date)
     end
     it "date equals 2015-05-18" do
-      expect(@match.date).to eq('2015-05-18')
+      expect(@match.date.to_s).to eq('2015-05-18')
     end
   end
   #TODO: create tests for date, location, card name
