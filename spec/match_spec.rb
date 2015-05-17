@@ -1,4 +1,5 @@
 require 'pry'
+require 'date'
 
 
 RSpec.describe 'Match', :match do
@@ -10,6 +11,7 @@ RSpec.describe 'Match', :match do
       winner:         'John Cena',
       outcome:        'submission',
       time:           '12:52',
+      date:           Date.new(2015,5,18),
     })
   end
   describe '#initialize' do
