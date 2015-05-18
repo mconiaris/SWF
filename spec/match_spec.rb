@@ -4,9 +4,25 @@ require 'date'
 
 RSpec.describe 'Match', :match do
   before(:context) do
+    @wrestler_1 = Wrestler.new({
+      first:          'John',
+      last:           'Cena',
+      priority:       '5',
+      tag_priority:   '2',
+      height:         "6' 1\"",
+      weight:         "251",
+      city:           "West Newbury",
+      state:          "MA",
+      country:        "United States",
+      region:         "Northeast",
+      wins:           "3",
+      losses:         "2",
+      draws:          "1",
+      aliases:        "The Prototype"
+      })
     @match = Match.new({
       match_type:     'single',
-      wrestler_1:     'John Cena',
+      wrestler_1:     @wrestler_1,
       wrestler_2:     'Rusev',
       winner:         'John Cena',
       outcome:        'submission',
@@ -21,8 +37,8 @@ RSpec.describe 'Match', :match do
     it "match_type is 'single'" do
       expect(@match.match_type).to eq('single')
     end
-    it "wrestler_1 returns 'John Cena'" do
-      expect(@match.wrestler_1).to eq('John Cena')
+    it "'{@match.wrestler_1.first} {@match.wrestler_1.last}' returns 'John Cena'" do
+      expect("#{@match.wrestler_1.first} #{@match.wrestler_1.last}").to eq('John Cena')
     end
     it "wrestler_2 returns 'Rusev'" do
       expect(@match.wrestler_2).to eq('Rusev')
