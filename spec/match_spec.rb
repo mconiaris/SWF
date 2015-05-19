@@ -43,7 +43,8 @@ RSpec.describe 'Match', :match do
       outcome:        'submission',
       time:           '12:52',
       date:           Date.new(2015,5,18),
-      location:       'New York'
+      location:       'New York',
+      card_name:      'WWE on Tour'
     })
   end
   describe 'after #initialize' do

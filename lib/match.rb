@@ -4,7 +4,7 @@ class Match
 
   attr_reader :match_type, :wrestler_1, :wrestler_2,
     :winner, :outcome, :time, :date, :location,
-    :card_name,
+    :card_name
 
   def initialize(args)
     @match_type         =  args[:match_type]
