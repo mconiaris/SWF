@@ -92,5 +92,9 @@ RSpec.describe 'Wrestler', :wrestler do
       @wrestler.add_win
       expect(@wrestler.wins).to eq(4)
     end
+    it "#add_loss changes loss number from 2 to 3" do
+      @wrestler.add_loss
+      expect(@wrestler.losses).to eq(3)
+    end
   end
 end

@@ -80,4 +80,8 @@ class Wrestler
   def add_win
     @wins += 1
   end
+
+  def add_loss
+    @losses += 1
+  end
 end
