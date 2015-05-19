@@ -35,6 +35,11 @@ RSpec.describe 'Match', :match do
       draws:          "3",
       aliases:        "Miroslav Makarov"
       })
+    @card = Card.new({
+      date:           Date.new(2015,5,18),
+      location:       'New York',
+      card_name:      'WWE on Tour'
+      })
     @match = Match.new({
       match_type:     'single',
       wrestler_1:     @wrestler_1,
@@ -42,9 +47,7 @@ RSpec.describe 'Match', :match do
       winner:         'John Cena',
       outcome:        'submission',
       time:           '12:52',
-      date:           Date.new(2015,5,18),
-      location:       'New York',
-      card_name:      'WWE on Tour'
+      card:           @card
     })
   end
   describe 'after #initialize' do
@@ -70,16 +73,16 @@ RSpec.describe 'Match', :match do
       expect(@match.time).to eq('12:52')
     end
     it "returns a date object" do
-      expect(@match.date.class).to eq(Date)
+      expect(@match.card.date.class).to eq(Date)
     end
-    it "date to string equals 2015-05-18" do
-      expect(@match.date.to_s).to eq('2015-05-18')
+    it "date of Card to string equals 2015-05-18" do
+      expect(@match.card.date.to_s).to eq('2015-05-18')
     end
-    it "location equals 'New York'" do
-      expect(@match.location).to eq('New York')
+    it "location of Card equals 'New York'" do
+      expect(@match.card.location).to eq('New York')
     end
-    it "card_name is 'WWE on Tour'" do
-      expect(@match.card_name).to eq('WWE on Tour')
+    it "card_name of Card is 'WWE on Tour'" do
+      expect(@match.card.card_name).to eq('WWE on Tour')
     end
   end
 end
