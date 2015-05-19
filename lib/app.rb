@@ -1,6 +1,7 @@
 require_relative 'wrestler'
 require_relative 'match'
 require_relative 'arena'
+require_relative 'card'
 require 'csv'
 
 def turn_array_into_objects(array)
