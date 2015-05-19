@@ -20,7 +20,7 @@ RSpec.describe 'Wrestler', :wrestler do
     })
 
   end
-  describe '#initialize' do
+  describe 'after #initialize' do
     it "returns a Wrestler object" do
       expect(@wrestler.class).to eq(Wrestler)
     end
@@ -87,6 +87,12 @@ RSpec.describe 'Wrestler', :wrestler do
     end
     it "aliases returns 'The Prototype'" do
       expect(@wrestler.aliases).to eq('The Prototype')
+    end
+  end
+  describe "#add_win" do
+    @wrestler.add_win
+    it "changes wins number from 3 to 4" do
+      expect(@wrestler.wins).to eq(4)
     end
   end
 end
