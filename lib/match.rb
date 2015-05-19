@@ -1,5 +1,3 @@
-require 'date'
-
 class Match
 
   attr_reader :match_type, :wrestler_1, :wrestler_2,

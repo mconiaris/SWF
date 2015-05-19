@@ -1,7 +1,3 @@
-require 'pry'
-require 'date'
-
-
 RSpec.describe 'Match', :match do
   before(:context) do
     @wrestler_1 = Wrestler.new({
