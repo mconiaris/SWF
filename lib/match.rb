@@ -13,5 +13,6 @@ class Match
     @outcome            =  args[:outcome]
     @time               =  args[:time]
     @date               =  args[:date]
+    @location           =  args[:location]
   end
 end
