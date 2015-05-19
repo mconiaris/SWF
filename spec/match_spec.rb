@@ -20,17 +20,32 @@ RSpec.describe 'Match', :match do
       draws:          "1",
       aliases:        "The Prototype"
       })
+    @wrestler_2 = Wrestler.new({
+      first:          'Alexander',
+      last:           'Rusev',
+      priority:       '4',
+      tag_priority:   '2',
+      height:         "6' 0\"",
+      weight:         "304",
+      city:           "Plovdiv",
+      country:        "Bulgaria",
+      region:         "Northeast",
+      wins:           "5",
+      losses:         "4",
+      draws:          "3",
+      aliases:        "Miroslav Makarov"
+      })
     @match = Match.new({
       match_type:     'single',
       wrestler_1:     @wrestler_1,
-      wrestler_2:     'Rusev',
+      wrestler_2:     @wrestler_2,
       winner:         'John Cena',
       outcome:        'submission',
       time:           '12:52',
       date:           Date.new(2015,5,18),
     })
   end
-  describe '#initialize' do
+  describe 'after #initialize' do
     it "returns a Match object" do
       expect(@match.class).to eq(Match)
     end
@@ -41,7 +56,7 @@ RSpec.describe 'Match', :match do
       expect("#{@match.wrestler_1.first} #{@match.wrestler_1.last}").to eq('John Cena')
     end
     it "wrestler_2 returns 'Rusev'" do
-      expect(@match.wrestler_2).to eq('Rusev')
+      expect(@match.wrestler_2.last).to eq('Rusev')
     end
     it "winner returns 'John Cena'" do
       expect(@match.winner).to eq('John Cena')
