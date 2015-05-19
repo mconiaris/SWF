@@ -3,7 +3,7 @@ require 'date'
 class Match
 
   attr_reader :match_type, :wrestler_1, :wrestler_2,
-    :winner, :outcome, :time, :date
+    :winner, :outcome, :time, :date, :location
 
   def initialize(args)
     @match_type         =  args[:match_type]
