@@ -84,4 +84,8 @@ class Wrestler
   def add_loss
     @losses += 1
   end
+
+  def add_draw
+    @draws += 1
+  end
 end

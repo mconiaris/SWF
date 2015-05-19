@@ -96,5 +96,9 @@ RSpec.describe 'Wrestler', :wrestler do
       @wrestler.add_loss
       expect(@wrestler.losses).to eq(3)
     end
+    it "#add_draw changes loss number from 1 to 2" do
+      @wrestler.add_draw
+      expect(@wrestler.draws).to eq(2)
+    end
   end
 end
