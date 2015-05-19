@@ -81,5 +81,4 @@ RSpec.describe 'Match', :match do
       expect(@match.card_name).to eq('WWE on Tour')
     end
   end
-  #TODO: create tests for date, location, card name
 end
