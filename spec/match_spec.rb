@@ -77,6 +77,9 @@ RSpec.describe 'Match', :match do
     it "location equals 'New York'" do
       expect(@match.location).to eq('New York')
     end
+    it "card_name is 'WWE on Tour'" do
+      expect(@match.card_name).to eq('WWE on Tour')
+    end
   end
   #TODO: create tests for date, location, card name
 end
