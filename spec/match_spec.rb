@@ -73,7 +73,9 @@ RSpec.describe 'Match', :match do
     it "date to string equals 2015-05-18" do
       expect(@match.date.to_s).to eq('2015-05-18')
     end
-
+    it "location equals 'New York'" do
+      expect(@match.location).to eq('New York')
+    end
   end
   #TODO: create tests for date, location, card name
 end
