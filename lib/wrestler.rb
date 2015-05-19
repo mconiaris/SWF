@@ -5,6 +5,8 @@ class Wrestler
     :region, :wins, :losses, :draws, :difference,
     :matches, :remaining, :status, :aliases
 
+  attr_writer :add_win
+
 
   def initialize(args)
     @first          =  args[:first]
@@ -73,5 +75,9 @@ class Wrestler
     else
       "Retired"
     end
+  end
+
+  def add_win
+    @wins += 1
   end
 end

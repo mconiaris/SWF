@@ -88,10 +88,8 @@ RSpec.describe 'Wrestler', :wrestler do
     it "aliases returns 'The Prototype'" do
       expect(@wrestler.aliases).to eq('The Prototype')
     end
-  end
-  describe "#add_win" do
-    @wrestler.add_win
-    it "changes wins number from 3 to 4" do
+    it "#add_win changes wins number from 3 to 4" do
+      @wrestler.add_win
       expect(@wrestler.wins).to eq(4)
     end
   end
